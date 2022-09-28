@@ -54,7 +54,7 @@ public class BookController{
         return new ResponseEntity<>(book , HttpStatus.ACCEPTED);
     }
 
-    @PutMapping("/change_status/{id}")
+    @GetMapping("/change_status/{id}")
     public ResponseEntity<Book> changeBookStatus(@PathVariable("id") Long id){
         Book book = bookService.changeBookReadStatus(id);
         return new ResponseEntity<>(book , HttpStatus.OK);
