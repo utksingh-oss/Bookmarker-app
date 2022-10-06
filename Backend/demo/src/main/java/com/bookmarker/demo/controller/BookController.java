@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/books")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BookController{
     private final BookService bookService;
 
